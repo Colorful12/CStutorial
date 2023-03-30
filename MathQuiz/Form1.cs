@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,9 +59,11 @@ namespace MathQuiz
                 MessageBox.Show("You got all the answers right!",
                                 "Congratulations!");
                 startButton.Enabled = true;
+                timeLabel.BackColor = Color.Empty;
             }
             else if (timeLeft > 0)
-            {
+            {   
+                if(timeLeft <= 5) timeLabel.BackColor = Color.Red;
                 // the case all the answers aren't correct and time is left
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
@@ -76,6 +79,7 @@ namespace MathQuiz
                 product.Value = multiplicand * multiplier;
                 quotient.Value = dividend / divisor;
                 startButton.Enabled = true;
+                timeLabel.BackColor = Color.Empty;
             }
 
         }
