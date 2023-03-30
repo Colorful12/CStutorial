@@ -33,11 +33,6 @@ namespace MathQuiz
 
         }
 
-        private void quotient_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         int timeLeft;
 
         /// <summary>

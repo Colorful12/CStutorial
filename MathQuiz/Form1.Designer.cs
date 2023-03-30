@@ -233,7 +233,6 @@
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(100, 37);
             this.quotient.TabIndex = 4;
-            this.quotient.ValueChanged += new System.EventHandler(this.quotient_ValueChanged);
             this.quotient.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // dividedRightLabel
